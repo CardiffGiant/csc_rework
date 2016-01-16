@@ -2,15 +2,6 @@
 window.onload = function () { setTimeout( function () { $('#loading').addClass('stopIt'); 
       $('#wrapper').css('visibility', 'visible'); 
       $('#wrapper').fadeTo(2000, 1.0);}, 3000)};
-      //console.log(window.$('img').length);
-      //var percentCounter = 0;
-      //$.each(arrayOfImageUrls, function(index, value) {
-         //$('<img></img>').attr('src', value)
-            //.load(function() {
-              // percentCounter=(index /arrayOfImageUrls.length) * 100;
-               //$('#progressChecker').text(percentCounter + '%');
-               //});
-         //});
 
       
 
@@ -18,7 +9,7 @@ window.onload = function () { setTimeout( function () { $('#loading').addClass('
 
 var $lastClicked = 0;
 var $info;
-var movies = [ ".\\assets\\movies\\Bakers_Square.mp4",".\\assets\\movies\\Carte_Noire.mp4"];
+var movies = [ ".\\images\\Bakers_Square.mp4",".\\images\\Carte_Noire.mp4"];
 $('.posterBox').on("click",function() {
    if ($(this).width() === 263) {
       if ($lastClicked !== 0) {
