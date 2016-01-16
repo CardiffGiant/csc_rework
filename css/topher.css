@@ -30,28 +30,38 @@
    position: fixed;
 }
 #load, #loadInner {
+   animation: spin 1.5s infinite ease;
    -moz-animation: spin 1.5s infinite ease;
    -webkit-animation: spin 1.5s infinite ease;
 }
+@keyframes spin {
+   0% {transform: rotate(0deg);}
+   100% {transform: rotate(360deg);}
+}
 @-moz-keyframes spin {
     0% {-moz-transform: rotate(0deg);}
-    100% {-moz-transform: rotate(360deg);};
+    100% {-moz-transform: rotate(360deg);}
 }
 @-webkit-keyframes spin {
     0% {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(360deg);};
+    100% {-webkit-transform: rotate(360deg);}
 }
 #loadMiddle {
-   //-moz-animation: spinoff 1.5s infinite ease;
-   //-webkit-animation: spinoff 1.5s infinite ease;
+   animation: spin 1.5s infinite ease;
+   -moz-animation: spinoff 1.5s infinite ease;
+   -webkit-animation: spinoff 1.5s infinite ease;
+}
+@keyframes spinoff {
+   0% {transform: rotate(0deg);}
+   100% {transform: rotate(360deg);}
 }
 @-moz-keyframes spinoff {
     0% {-moz-transform: rotate(0deg);}
-    100% {-moz-transform: rotate(-360deg);};
+    100% {-moz-transform: rotate(-360deg);}
 }
 @-webkit-keyframes spinoff {
     0% {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(-360deg);};
+    100% {-webkit-transform: rotate(-360deg);}
 }
 #loader {
    height: 100vh;
@@ -91,38 +101,39 @@ html, body {
 #siteTitle {
    height: 23px;
    margin: 20px 0 0 20px;
-   //border: 1px solid #E0950B;
 }
 #navList {
    list-style: none;
    margin-left: 10%;
    padding-top: 5px;
    display: inline-block;
-   //border: 1px solid #E0950B;
 }
 #navList li {
    display: inline;
 }
 #navList li img {
    height: 22px;
+   width: auto;
 }
 #navList li a {
    text-decoration: none;
    margin: 0 10px;
    display: inline-block;
-   //border: 1px solid white;
 }
 #social {
    display: block;
    margin-right: 10px;
    margin-top: -37px;
    text-align: right;
-   //border: 1px solid white;
 }
 #social li {
    display: inline-block;
    margin-left: 10px;
    width: 25px;
+}
+#social li a img {
+   width: 25px;
+   height: 25px;
 }
 #social li a {
    text-decoration: none;
@@ -143,14 +154,12 @@ button .return {
    overflow: hidden;
    height: 420px;
    margin-top: 7%;
-   //border: 1px solid red;
 }
 #posterPanel {
    height: 350px;
    margin-left: 4%;
    padding: 10px 0px 10px 0px;
    border-left: 8px solid #E0950B;
-   //border-bottom: 8px solid #57595C;
 }
 .posterBox {
    background-color: black;
@@ -212,8 +221,6 @@ iframe {
 	height: 100%;
 	font-size: 18px;
    background-color: #57595C;
-   //overflow: hidden;
-   //border: 2px solid red;
 }
 #scrollbar {
    width: 700px;
@@ -317,7 +324,7 @@ iframe {
 #shade {
    position: fixed;
    width: 100vw;
-   height; 0vh;
+   height: 0px;
    top: 5%;
    left: 0;
    opacity: .5;
